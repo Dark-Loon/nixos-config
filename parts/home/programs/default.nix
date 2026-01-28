@@ -7,11 +7,11 @@
 {
   imports = [
     ./carapace
-    ./niri.nix
+    ./niri
     ./nushell
     ./starship
     ./waybar
-    ./wlogout.nix
+    ./wlogout
     ./yazi
   ];
 }

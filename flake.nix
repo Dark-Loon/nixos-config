@@ -28,6 +28,9 @@
       ...
     }:
     flake-parts.lib.mkFlake { inherit inputs; } {
+      imports = [
+        ./parts/templates
+      ];
       systems = [
         "x86_64-linux"
       ];
@@ -43,7 +46,7 @@
         nixosConfigurations = {
           nixos = nixpkgs.lib.nixosSystem {
             modules = [
-              ./hosts/acer
+              ./parts/hosts/acer
               {
                 nixpkgs.config.allowUnfreePredicate =
                   pkg: builtins.elem (nixpkgs.lib.getName pkg) [ "claude-code" ];
@@ -54,14 +57,14 @@
               {
                 home-manager.useGlobalPkgs = true;
                 home-manager.useUserPackages = true;
-                home-manager.users.armand = ./home;
+                home-manager.users.armand = ./parts/home;
                 home-manager.backupFileExtension = "backup";
               }
             ];
           };
           desktop = nixpkgs.lib.nixosSystem {
             modules = [
-              ./hosts/acer
+              ./parts/hosts/desktop
               {
                 nixpkgs.config.allowUnfreePredicate =
                   pkg: builtins.elem (nixpkgs.lib.getName pkg) [ "claude-code" ];
@@ -72,7 +75,7 @@
               {
                 home-manager.useGlobalPkgs = true;
                 home-manager.useUserPackages = true;
-                home-manager.users.armand = ./home;
+                home-manager.users.armand = ./parts/home;
                 home-manager.backupFileExtension = "backup";
 
               }
@@ -80,7 +83,7 @@
           };
           server = nixpkgs.lib.nixosSystem {
             modules = [
-              ./hosts/acer
+              ./parts/hosts/server
               {
                 nixpkgs.config.allowUnfreePredicate =
                   pkg: builtins.elem (nixpkgs.lib.getName pkg) [ "claude-code" ];
@@ -91,7 +94,7 @@
               {
                 home-manager.useGlobalPkgs = true;
                 home-manager.useUserPackages = true;
-                home-manager.users.armand = ./home;
+                home-manager.users.armand = ./parts/home;
                 home-manager.backupFileExtension = "backup";
 
               }

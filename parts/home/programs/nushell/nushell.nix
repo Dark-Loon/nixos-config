@@ -3,7 +3,21 @@
   programs.nushell = {
     enable = true;
     extraConfig = ''
-      # Set config values directly
+      use std/config *
+
+      $env.config.hooks.env_change.PWD = $env.config.hooks.env_change.PWD? | default []
+
+      $env.config.hooks.env_change.PWD ++= [{||
+        if (which direnv | is-empty) {
+          # If direnv isn't installed, do nothing
+          return
+        }
+
+        direnv export json | from json | default {} | load-env
+        # If direnv changes the PATH, it will become a string and we need to re-convert it to a list
+        $env.PATH = do (env-conversions).path.from_string $env.PATH
+      }]
+
       $env.config.buffer_editor = "hx"
       $env.config.show_banner = false
       $env.config.completions.case_sensitive = false
@@ -50,7 +64,7 @@
       # NOW set the completer to use the variable
       $env.config.completions.external.completer = $multiple_completers
 
-      # Your yazi integration
+      # yazi integration
       def --env y [...args] {
         let tmp = (mktemp -t "yazi-cwd.XXXXXX")
         yazi ...$args --cwd-file $tmp
@@ -59,6 +73,34 @@
           cd $cwd
         }
         rm -fp $tmp
+      }
+
+      def dvt [
+        template: string  # Template name (python, rust, etc.)
+        name?: string     # Optional project name
+      ] {
+        let project_name = ($name | default "my-project")
+        let template_lower = ($template | str downcase)
+
+        let template_path = match $template_lower { # ← Match against user input
+          "elm" | "e" => "gitlab:Darkloon/dotfiles#elm",
+          "haskell" | "h" => "gitlab:Darkloon/dotfiles#haskell",
+          "java" | "jv" => "gitlab:Darkloon/dotfiles#java",
+          "python" | "py" => "gitlab:Darkloon/dotfiles#python",
+          "rust" | "rs" => "gitlab:Darkloon/dotfiles#rust",
+          "typescript" | "ts" => "gitlab:Darkloon/dotfiles#typescript",
+          _ => {
+            print $"Unknown template: ($template_lower)"
+            print "Available: elm, haskell, java python, rust, typescript"
+            return
+          }
+        }
+
+        mkdir $project_name
+        cd $project_name
+        nix flake init -t $template_path
+        direnv allow
+        print $"✅ Project ($project_name) initialized with ($template_lower)"
       }
     '';
 
