@@ -87,5 +87,27 @@ in
 
       Install.WantedBy = [ "graphical-session.target" ];
     };
+
+    systemd.user.services.wallpaper-cycler-resume = {
+      Unit = {
+        Description = "Update wallpaper after resume";
+        After = [
+          "suspend.target"
+          "hibernate.target"
+          "hybrid-sleep.target"
+        ];
+      };
+
+      Service = {
+        Type = "oneshot";
+        ExecStart = "${pkgs.systemd}/bin/systemctl --user restart wallpaper-cycler.service";
+      };
+
+      Install.WantedBy = [
+        "suspend.target"
+        "hibernate.target"
+        "hybrid-sleep.target"
+      ];
+    };
   };
 }

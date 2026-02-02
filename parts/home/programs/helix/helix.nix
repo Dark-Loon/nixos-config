@@ -75,6 +75,10 @@
           exportPdf = "onType";
         };
       };
+      language-server.hls = {
+        command = "haskell-language-server-wrapper";
+        args = [ "--lsp" ];
+      };
     };
     # themes = {
     #   nord_night_transparent = {

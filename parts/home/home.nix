@@ -44,7 +44,7 @@
     obs-studio
     obs-cmd
     yt-dlp # Command-line tool to download videos from YouTube.com and other sites (youtube-dl fork)
-    # vlc # Media Player
+    vlc # Media Player
     # dim # Self-hosted media manager
     # qbittorrent # OpenSource Qt Bittorrent client
 

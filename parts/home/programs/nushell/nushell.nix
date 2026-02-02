@@ -84,15 +84,15 @@
 
         let template_path = match $template_lower { # ← Match against user input
           "elm" | "e" => "git+file:///home/armand/dotfiles#elm",
+          "go" | "g" => "git+file:///home/armand/dotfiles#go",          
           "haskell" | "h" => "git+file:///home/armand/dotfiles#haskell",
-          "java" | "jv" => "git+file:///home/armand/dotfiles#java",
-          "python" | "py" => "git+file:///home/armand/dotfiles#python",
-          "rust" | "rs" => "git+file:///home/armand/dotfiles#rust",
+          "java" | "j" => "git+file:///home/armand/dotfiles#java",
+          "rust" | "r" => "git+file:///home/armand/dotfiles#rust",
           "typescript" | "ts" => "git+file:///home/armand/dotfiles#typescript",
           "typst" | "t" => "git+file:///home/armand/dotfiles#typst",          
           _ => {
             print $"Unknown template: ($template_lower)"
-            print "Available: elm, haskell, java python, rust, typescript, typst"
+            print "Available: elm, go, haskell, java, rust, typescript, typst"
             return
           }
         }
