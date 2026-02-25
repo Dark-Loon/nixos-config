@@ -1,7 +1,4 @@
 {
-  pkgs,
-  inputs,
-  config,
   ...
 }:
 {
@@ -11,6 +8,7 @@
     ./niri
     ./nushell
     ./starship
+    ./vscode
     ./waybar
     ./wlogout
     ./yazi

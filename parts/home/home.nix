@@ -17,6 +17,7 @@
   services.mako.enable = true;
   services.swayidle.enable = true;
   services.polkit-gnome.enable = true;
+  services.udiskie.enable = true;
 
   home.packages = with pkgs; [
     # Browsing
@@ -49,7 +50,6 @@
     # qbittorrent # OpenSource Qt Bittorrent client
 
     # Coding
-    vscode
     zellij # Terminal workspace with batteries included
     curl
     # claude-code # Agentic coding tool

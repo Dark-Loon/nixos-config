@@ -1,4 +1,4 @@
-{ pkgs, lib, ... }:
+{ ... }:
 {
   programs.zathura = {
     enable = true;
@@ -38,6 +38,6 @@
 
       set recolor                     "false"
       set recolor-keephue             "false"
-      '';
+    '';
   };
 }
