@@ -521,6 +521,13 @@
       # { command = [ "/home/armand/Pictures/Wallpaper/wallpaper.sh" ]; }
       { command = [ "waybar" ]; }
       { command = [ "mako" ]; }
+      {
+        command = [
+          "sh"
+          "-c"
+          "dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP DISPLAY"
+        ];
+      }
     ];
   };
 }

@@ -5,6 +5,7 @@
   imports = [
     ./carapace
     ./helix
+    ./kanshi
     ./niri
     ./nushell
     ./starship

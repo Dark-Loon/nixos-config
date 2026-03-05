@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ pkgs, ... }:
 {
   imports = [
     ./programs
@@ -30,6 +30,7 @@
     file
     xdg-utils
     glow
+    android-tools
 
     # Niri essentials
     swaybg # Wallpaper
@@ -55,7 +56,7 @@
     # claude-code # Agentic coding tool
 
     # Misc
-    nil
+    nixd
     cmatrix
     htop
     # bitwarden-cli # Secure and free password manager for all of your devices

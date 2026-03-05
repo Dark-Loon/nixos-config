@@ -33,9 +33,7 @@
       language = [
         {
           name = "nix";
-          auto-format = true;
-          formatter.command = "${pkgs.nixfmt}/bin/nixfmt";
-          language-servers = [ "nil" ];
+          language-servers = [ "nixd" ];
         }
         {
           name = "css";

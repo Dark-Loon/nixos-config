@@ -66,7 +66,14 @@
             env = {
               # Required by rust-analyzer
               RUST_SRC_PATH = "${pkgs.rustToolchain}/lib/rustlib/src/rust/library";
+              OPENSSL_DIR = "${pkgs.openssl.dev}";
+              OPENSSL_LIB_DIR = "${pkgs.openssl.out}/lib";
+              PKG_CONFIG_PATH = "${pkgs.openssl.dev}/lib/pkgconfig";
             };
+
+          shellHook = ''
+            export LD_LIBRARY_PATH="${pkgs.openssl.out}/lib:$LD_LIBRARY_PATH"
+          '';   
           };
         }
       );
