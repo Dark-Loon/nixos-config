@@ -27,6 +27,7 @@
     rucola # Terminal-based markdown note manager
     file
     xdg-utils
+    watchexec
     glow
 
     # Niri essentials
@@ -105,20 +106,7 @@
     };
   };
 
-  xdg.mimeApps = {
-    enable = true;
-    defaultApplications = {
-      "application/pdf" = "org.pwmt.zathura.desktop";
-      "text/html" = "firefox.desktop";
-      "x-scheme-handler/http" = "firefox.desktop";
-      "x-scheme-handler/https" = "firefox.desktop";
-      "x-scheme-handler/about" = "firefox.desktop";
-      "x-scheme-handler/unknown" = "firefox.desktop";
-      "text/plain" = "helix.desktop";
-      "application/x-nuscript" = "helix.desktop";
-      "application/octet-stream" = "helix.desktop";
-    };
-  };
+  xdg.configFile."yazi/plugins/glow.yazi/main.lua".source = ./programs/yazi/glow.lua;
 
   xdg.desktopEntries.helix = {
     name = "Helix";
@@ -133,8 +121,24 @@
     ];
     mimeType = [
       "text/plain"
+      "text/markdown"
       "application/x-nuscript"
       "application/octet-stream"
     ];
+  };
+
+  xdg.mimeApps = {
+    enable = true;
+    defaultApplications = {
+      "application/pdf" = "org.pwmt.zathura.desktop";
+      "text/html" = "firefox.desktop";
+      "x-scheme-handler/http" = "firefox.desktop";
+      "x-scheme-handler/https" = "firefox.desktop";
+      "x-scheme-handler/about" = "firefox.desktop";
+      "x-scheme-handler/unknown" = "firefox.desktop";
+      "text/plain" = "helix.desktop";
+      "application/x-nuscript" = "helix.desktop";
+      "application/octet-stream" = "helix.desktop";
+    };
   };
 }

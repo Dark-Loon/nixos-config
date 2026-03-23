@@ -1,6 +1,50 @@
 { pkgs, config, ... }:
 {
   home.packages = with pkgs; [
+    (writeScriptBin "md-preview-watch" ''
+      #!/usr/bin/env nu 
+      def main [
+        filename: string
+      ] {
+        let dir = ($filename | path dirname)
+        let basename = ($filename | path basename)
+        clear
+        ^glow -s dark $filename
+        ^watchexec --watch $"($dir)" --filter $"($basename)" --debounce 1ms --shell=none --on-busy-update=restart -- glow -s dark $"($filename)"
+      }
+    '')
+    (writeScriptBin "md-preview" ''
+      #!/usr/bin/env nu 
+      def main [filename: string] {
+        ^open-terminal $"md-preview-watch '($filename)'"
+      }
+    '')
+    (writeScriptBin "open-terminal" ''
+      #!/usr/bin/env nu   
+      def main [cmd: string] {
+        if (which zellij | is-not-empty) and ("ZELLIJ" in $env) {
+          # already inside zellij, open a new pane
+          ^zellij action new-pane --direction right -- nu -c $cmd
+        } else if ("GHOSTTY_BIN_DIR" in $env) {
+          ^ghostty -e nu -c $cmd
+        } else {
+          ^foot nu -c $cmd
+        }
+      }
+    '')
+    (writeScriptBin "file-preview" ''
+      #!/usr/bin/env nu 
+      def main [
+        filename: string
+      ] {
+        let ext = ($filename | path parse | get extension)
+        match $ext {
+          "typ" => { ^zathura-opener $filename }
+          "md" => { ^md-preview $filename }
+          "pdf" => { ^zathura $filename }
+        }
+      }
+    '')
     (writeScriptBin "zathura-opener" ''
       #!/usr/bin/env nu 
       def main [
@@ -27,7 +71,7 @@
           select = "underline";
         };
       };
-      keys.normal.space.z = ":sh zathura-opener %{buffer_name}";
+      keys.normal.space.z = ":sh file-preview (realpath $'%{buffer_name}')";
     };
     languages = {
       language = [

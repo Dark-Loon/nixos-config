@@ -15,6 +15,7 @@
     ./wlogout
     ./yazi
     ./zathura
+    ./zellij
     ./zoxide
   ];
 }

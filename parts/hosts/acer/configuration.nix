@@ -173,6 +173,7 @@
       "video"
     ];
     hashedPasswordFile = config.sops.secrets.user_creds.path;
+    shell = pkgs.nushell;
   };
 
   nix.gc = {

@@ -1,0 +1,8 @@
+{
+  ...
+}:
+{
+  imports = [
+    ./zellij.nix
+  ];
+}
