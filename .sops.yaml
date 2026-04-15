@@ -1,6 +1,6 @@
 keys:
   - &host_nixos age1nk8leddm7qeat9j0320hpn5r2rjkhprp00k7tx8yv7dda7xks9zsq9gc5n
-  - &host_omen age1860wzxx9w4ld9jx9d6khvef7malq888qmge2gc4p2y949vlppvjqvxypaq
+  - &host_omen age17zev7v7fec6yhna4lxahf235rx8ykvkckty96tmm30pjp84npfmqmff3ez
 
 creation_rules:
   - path_regex: parts/secrets/[^/]+\.enc$

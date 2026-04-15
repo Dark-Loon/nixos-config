@@ -1,0 +1,28 @@
+The real fix: add yourself as a personal age recipient
+This is the standard pattern — you have one personal age key that lets you manage secrets from your dev environment:
+bash# Generate a personal age key (if you don't have one)
+mkdir -p ~/.config/sops/age
+age-keygen -o ~/.config/sops/age/keys.txt
+# Note the public key it prints, e.g. age1personal...
+Then in .sops.yaml:
+yamlkeys:
+  - &personal age1personal...        # your user key, for managing secrets
+  - &acer    age1nk8leddm7q...       # acer host key
+  - &omen    age17zev7v7fec6...      # omen host key
+
+creation_rules:
+  - path_regex: secrets/.*
+    key_groups:
+      - age:
+          - *personal
+          - *acer
+          - *omen
+But now you need to bootstrap — since you currently can't decrypt the file from userspace, you need to do updatekeys from the acer/main machine using its host key directly:
+bash# On the main machine, as root or pointing sops at the host key
+sudo SOPS_AGE_KEY_FILE=/etc/ssh/ssh_host_ed25519_key \
+  sops updatekeys /path/to/dotfiles/parts/secrets/secrets.env
+Actually, the host key isn't directly an age key file — you need to convert it first:
+bash# On main machine
+sudo ssh-to-age -private-key -i /etc/ssh/ssh_host_ed25519_key \
+  | SOPS_AGE_KEY=$(cat) sops updatekeys /path/to/dotfiles/parts/secrets/secrets.env
+Once that succeeds and your personal age key is a recipient, all future updatekeys/edits work normally from your user session on any machine.

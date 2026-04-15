@@ -5,7 +5,7 @@
     vencord.themes = {
       midnight = builtins.fetchurl {
         url = "https://refact0r.github.io/midnight-discord/build/midnight.css";
-        sha256 = "0kgsa1wdpv5jpvcpz6igpcny90a00zv7qf94cxk3l6wvd0df9n8d";
+        sha256 = "12z5vqkdxpa8jhk67yss4xj8m2h089910dc6hjr12ym03952pfkx";
       };
     };
 
