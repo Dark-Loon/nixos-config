@@ -71,6 +71,7 @@ in
     watchexec
     glow
     yaziChooser
+    ssh-to-age
 
     # Niri essentials
     swaybg # Wallpaper
@@ -93,6 +94,7 @@ in
     aider-chat-with-playwright
     zellij # Terminal workspace with batteries included
     curl
+    azure-cli
     # claude-code # Agentic coding tool
 
     # Misc

@@ -1,4 +1,5 @@
 keys:
+  - &personal age159q83zjr5xyztzagq7mpt23hyn8y73cl93nyttpneelf5utt2g2scjmufz
   - &host_nixos age1nk8leddm7qeat9j0320hpn5r2rjkhprp00k7tx8yv7dda7xks9zsq9gc5n
   - &host_omen age17zev7v7fec6yhna4lxahf235rx8ykvkckty96tmm30pjp84npfmqmff3ez
 
@@ -6,11 +7,13 @@ creation_rules:
   - path_regex: parts/secrets/[^/]+\.enc$
     key_groups:
       - age:
+          - *personal
           - *host_nixos
           - *host_omen
   
   - path_regex: parts/secrets/[^/]+\.(yaml|json|env|ini)$
     key_groups:
       - age:
+          - *personal          
           - *host_nixos
           - *host_omen

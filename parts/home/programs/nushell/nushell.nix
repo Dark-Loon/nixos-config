@@ -2,6 +2,21 @@
 {
   programs.nushell = {
     enable = true;
+    extraEnv = ''
+    $env.EDITOR = "hx"
+
+    $env.SOPS_AGE_KEY_CMD = "ssh-to-age -private-key -i /home/armand/.ssh/id_ed25519"
+
+    if ($env.HOME | path join '.secrets' | path exists) {
+      ls ($env.HOME | path join '.secrets')
+        | where type == file
+        | each { |f|
+            { ($f.name | path basename): (open $f.name | str trim) }
+          }
+        | into record   # merges list of single-key records → one record
+        | load-env      # loads the whole record into env at outer scope
+    }
+    '';
     extraConfig = ''
       use std/config *
 
