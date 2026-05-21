@@ -126,6 +126,65 @@
         direnv allow
         print $"✅ Project ($project_name) initialized with ($template_lower)"
       }
+
+      def find-pkms [] {
+          let name = ($env | get -o PKMS_NAME | default "PKMS")
+          let results = (
+              glob $"($env.HOME)/**/($name)" --depth 5
+              | where { |p| ($p | path type) == "dir" }
+          )
+          if ($results | is-empty) { null } else { $results | first }
+      }
+
+      def parse-fm [file: string] {
+          let raw = (open --raw $file)
+          if not ($raw | str starts-with "---") { return {} }
+          let fm_block = ($raw | str replace -r '(?s)^---\n(.*?)\n---.*' '$1')
+          let parsed = (try { $fm_block | from yaml } catch { {} })
+          # from yaml returns a bare string for scalar frontmatter — guard against it
+          if ($parsed | describe | str starts-with "record") { $parsed } else { {} }
+      }
+
+      def f [...terms: string] {
+          if ($terms | is-empty) {
+              print "Usage: f <term> [term2 ...]"
+              print "Quoted phrases: f 'international law' extradition"
+              return
+          }
+
+          let pkms = (find-pkms)
+          if $pkms == null {
+            print "No PKMS directory found under $HOME (depth 5). Is it named 'PKMS'?"
+            return
+          }
+
+          let seed = (try { rg -ilF ($terms | first) $pkms | lines } catch { [] })
+
+          $seed
+          | where { |f| $f | str ends-with ".md" }
+          | each { |f|
+              let term_hits = (
+                  $terms | each { |t| try { rg -icF $t $f | into int } catch { 0 } }
+              )
+              { f: $f, term_hits: $term_hits }
+          }
+          | where { |r| $r.term_hits | all { |h| $h > 0 } }
+          | each { |r|
+              let fm    = (parse-fm $r.f)
+              let tags  = ($fm | get -o tags | default [])
+              {
+                  file:       ($r.f | path relative-to $pkms)
+                  title:      ($fm | get -o title | default ($r.f | path basename))
+                  tags:       $tags
+                  hits:       ($r.term_hits | math sum)
+                  matched_in: (
+                      if ($terms | any { |t| $tags | any { |tag| $tag =~ $t } })
+                      { "tags+content" } else { "content only" }
+                  )
+              }
+          }
+          | sort-by hits --reverse
+      }
     '';
 
     shellAliases = {

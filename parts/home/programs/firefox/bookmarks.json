@@ -319,6 +319,10 @@
             {
               "name": "Neocities: Create your own free website!",
               "url": "https://neocities.org/"
+            },
+            {
+              "name": "Computer Science",
+              "url": "https://arxiv.org/archive/cs"
             }
           ]
         },
@@ -2852,6 +2856,10 @@
             {
               "name": "Grégoire Blanc | Theremin & Music | Official website",
               "url": "https://gregoireblanc.com/en/home/"
+            },
+            {
+              "name": "On \"SUNRISE\" MICHELLE Define How It Feels to Lose Something that Was Never Really Yours | The Wild Honey Pie",
+              "url": "https://www.thewildhoneypie.com/buzzing-daily/michelle-sunrise"
             }
           ]
         }
@@ -7938,6 +7946,14 @@
         {
           "name": "Puzzels • lichess.org",
           "url": "https://lichess.org/training/w4OKf"
+        },
+        {
+          "name": "Puzzles • lichess.org",
+          "url": "https://lichess.org/training/FLaGS"
+        },
+        {
+          "name": "Puzzles • lichess.org",
+          "url": "https://lichess.org/training/Yj7Kw"
         }
       ]
     },
