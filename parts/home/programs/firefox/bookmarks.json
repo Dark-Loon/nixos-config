@@ -2940,6 +2940,22 @@
         {
           "name": "espanso github at DuckDuckGo",
           "url": "https://duckduckgo.com/?t=ffab&q=espanso+github&ia=web"
+        },
+        {
+          "name": "GitHub - rust-lang/miri: An interpreter for Rust's mid-level intermediate representation · GitHub",
+          "url": "https://github.com/rust-lang/miri"
+        },
+        {
+          "name": "Struct Expressions - Rust - W3cubDocs",
+          "url": "https://docs.w3cub.com/rust/reference/expressions/struct-expr.html#:~:text=Functional%20update%20syntax"
+        },
+        {
+          "name": "Defining and Instantiating Structs - The Rust Programming Language",
+          "url": "https://doc.rust-lang.org/book/ch05-01-defining-structs.html#creating-instances-from-other-instances-with-struct-update-syntax"
+        },
+        {
+          "name": "Governance - Rust Programming Language",
+          "url": "https://rust-lang.org/governance/"
         }
       ]
     },
@@ -3074,6 +3090,10 @@
         {
           "name": "Ben jij een luide prater? Grotere kans dat je uit het zuiden komt",
           "url": "https://scientias.nl/ben-jij-een-luide-prater-grotere-kans-dat-je-uit-het-zuiden-komt/"
+        },
+        {
+          "name": "paracosm meaning at DuckDuckGo",
+          "url": "https://duckduckgo.com/?t=ffab&q=paracosm+meaning&ia=web"
         }
       ]
     },
@@ -7954,6 +7974,10 @@
         {
           "name": "Puzzles • lichess.org",
           "url": "https://lichess.org/training/Yj7Kw"
+        },
+        {
+          "name": "general-chess-discussion/analysis-of-lichess-cheating-detection-with-machine-learning-ml-a-mis-use-of-ml--doesnt-work at DuckDuckGo",
+          "url": "https://duckduckgo.com/?t=ffab&q=general-chess-discussion%2Fanalysis-of-lichess-cheating-detection-with-machine-learning-ml-a-mis-use-of-ml--doesnt-work&ia=web"
         }
       ]
     },
@@ -11488,6 +11512,10 @@
         {
           "name": "Amdir Vs Jovan the last Chairbender on Marcelllus Williams' guilt | PreserveTube",
           "url": "https://preservetube.com/watch?v=QQPrNQxBTNc"
+        },
+        {
+          "name": "Case Files: Jury Nullification Cases : Law and Legal Cases : Library : Library & Resources : Fully Informed Jury Association",
+          "url": "https://fija.org/library-and-resources/library/law-and-legal-cases/case-files-jury-nullification-cases.html"
         }
       ]
     },
@@ -11572,6 +11600,68 @@
         {
           "name": "Privacy International",
           "url": "https://privacyinternational.org/"
+        },
+        {
+          "name": "Any Open Source · GitHub",
+          "url": "https://github.com/anyopensource"
+        }
+      ]
+    },
+    {
+      "toolbar": false,
+      "name": "Game of Thrones",
+      "bookmarks": [
+        {
+          "name": "a world of ice and fire at DuckDuckGo",
+          "url": "https://duckduckgo.com/?t=ffab&q=a+world+of+ice+and+fire&ia=web"
+        }
+      ]
+    },
+    {
+      "toolbar": false,
+      "name": "Music",
+      "bookmarks": [
+        {
+          "name": "Music of Nier - Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Music_of_Nier"
+        }
+      ]
+    },
+    {
+      "toolbar": false,
+      "name": "Tetris",
+      "bookmarks": [
+        {
+          "name": "GitHub - Elanif/NESTRIS: The most accurate nes tetris clone · GitHub",
+          "url": "https://github.com/Elanif/NESTRIS"
+        },
+        {
+          "name": "nestris.org | The ultimate multiplayer twist to the classic block stacker game | Patreon",
+          "url": "https://www.patreon.com/nestrisorg/about"
+        },
+        {
+          "name": "GitHub - GregoryCannon/StackRabbit: An AI for playing NES Tetris at a high level. Based primarily on search & heuristic, with high quality board evaluation through value iteration. · GitHub",
+          "url": "https://github.com/GregoryCannon/StackRabbit"
+        }
+      ]
+    },
+    {
+      "toolbar": false,
+      "name": "House",
+      "bookmarks": [
+        {
+          "name": "ceiling fan meaning at DuckDuckGo",
+          "url": "https://duckduckgo.com/?q=ceiling+fan+meaning&iar=images&t=ffab"
+        }
+      ]
+    },
+    {
+      "toolbar": false,
+      "name": "Git",
+      "bookmarks": [
+        {
+          "name": "Git - Basic Branching and Merging",
+          "url": "https://git-scm.com/book/en/v2/Git-Branching-Basic-Branching-and-Merging"
         }
       ]
     }

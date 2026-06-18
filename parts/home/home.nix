@@ -138,6 +138,23 @@ in
 
   programs.git = {
     enable = true;
+    config = {
+      init = {
+        defaultBranch = "main";
+      };
+      pull.ff = "only";
+      url = {
+      "git@github.com:" = {
+        insteadOf = [
+          "https://github.com/"
+        ];
+      };
+      "git@gitlab.com:" = {
+        insteadOf = [
+          "https://gitlab.com/"
+        ];
+      };
+    };
     lfs.enable = true;
     settings = {
       user.name = "Dark_Loon";
@@ -152,6 +169,10 @@ in
       gpg.ssh.allowedSignersFile = "${config.home.homeDirectory}/.config/git/allowed_signers";
       commit.gpgsign = true;
       tag.gpgsign = true;
+      core.autocrlf = "input";
+      push.autoSetupRemote = true;
+      rerere.enabled = true;
+      diff.algorithm = "histogram";
     };
   };
 
