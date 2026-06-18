@@ -144,15 +144,16 @@ in
       };
       pull.ff = "only";
       url = {
-      "git@github.com:" = {
-        insteadOf = [
-          "https://github.com/"
-        ];
-      };
-      "git@gitlab.com:" = {
-        insteadOf = [
-          "https://gitlab.com/"
-        ];
+        "git@github.com:" = {
+          insteadOf = [
+            "https://github.com/"
+          ];
+        };
+        "git@gitlab.com:" = {
+          insteadOf = [
+            "https://gitlab.com/"
+          ];
+        };
       };
     };
     lfs.enable = true;
