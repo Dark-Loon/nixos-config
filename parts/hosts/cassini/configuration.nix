@@ -110,6 +110,28 @@
     package = pkgs.niri;
   };
 
+  programs.git = {
+    enable = true;
+    config = {
+      init = {
+        defaultBranch = "main";
+      };
+      pull.ff = "only";
+      url = {
+        "git@github.com:" = {
+          insteadOf = [
+            "https://github.com/"
+          ];
+        };
+        "git@gitlab.com:" = {
+          insteadOf = [
+            "https://gitlab.com/"
+          ];
+        };
+      };
+    };
+  };
+
   services.tlp.enable = true;
 
   services.greetd = {
@@ -184,13 +206,16 @@
     targets.qt.enable = false;
   };
 
-  environment.sessionVariables = {
-    NIXOS_OZONE_WL = "1";
-    MOZ_ENABLE_WAYLAND = "1";
-    GTK_USE_PORTAL = "1";
+  environment = {
+    sessionVariables = {
+      NIXOS_OZONE_WL = "1";
+      MOZ_ENABLE_WAYLAND = "1";
+      GTK_USE_PORTAL = "1";
+    };
+    pathsToLink = [ "/share/xdg-desktop-portal" "/share/applications" ];
+    localBinInPath = true;
   };
-  environment.pathsToLink = [ "/share/xdg-desktop-portal" "/share/applications" ];
-
+  
   xdg.portal = {
     enable = true;
     extraPortals = with pkgs; [
