@@ -74,6 +74,7 @@
 
           match $spans.0 {
             __zoxide_z | __zoxide_zi => $zoxide_completer
+            stf => null
             _ => $carapace_completer
           } | do $in $spans
       }
