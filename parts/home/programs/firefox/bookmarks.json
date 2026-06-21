@@ -293,6 +293,22 @@
               "url": "https://github.com/espanso/espanso"
             },
             {
+              "name": "GitHub - rust-lang/miri: An interpreter for Rust's mid-level intermediate representation · GitHub",
+              "url": "https://github.com/rust-lang/miri"
+            },
+            {
+              "name": "Struct Expressions - Rust - W3cubDocs",
+              "url": "https://docs.w3cub.com/rust/reference/expressions/struct-expr.html#:~:text=Functional%20update%20syntax"
+            },
+            {
+              "name": "Defining and Instantiating Structs - The Rust Programming Language",
+              "url": "https://doc.rust-lang.org/book/ch05-01-defining-structs.html#creating-instances-from-other-instances-with-struct-update-syntax"
+            },
+            {
+              "name": "Governance - Rust Programming Language",
+              "url": "https://rust-lang.org/governance/"
+            },
+            {
               "name": "Brainfuck at DuckDuckGo",
               "url": "https://duckduckgo.com/?t=ffab&q=Brainfuck&ia=web"
             },
@@ -2942,20 +2958,8 @@
           "url": "https://duckduckgo.com/?t=ffab&q=espanso+github&ia=web"
         },
         {
-          "name": "GitHub - rust-lang/miri: An interpreter for Rust's mid-level intermediate representation · GitHub",
-          "url": "https://github.com/rust-lang/miri"
-        },
-        {
-          "name": "Struct Expressions - Rust - W3cubDocs",
-          "url": "https://docs.w3cub.com/rust/reference/expressions/struct-expr.html#:~:text=Functional%20update%20syntax"
-        },
-        {
-          "name": "Defining and Instantiating Structs - The Rust Programming Language",
-          "url": "https://doc.rust-lang.org/book/ch05-01-defining-structs.html#creating-instances-from-other-instances-with-struct-update-syntax"
-        },
-        {
-          "name": "Governance - Rust Programming Language",
-          "url": "https://rust-lang.org/governance/"
+          "name": "Variadics - Rust By Example",
+          "url": "https://doc.rust-lang.org/rust-by-example/macros/variadics.html"
         }
       ]
     },
@@ -11662,6 +11666,16 @@
         {
           "name": "Git - Basic Branching and Merging",
           "url": "https://git-scm.com/book/en/v2/Git-Branching-Basic-Branching-and-Merging"
+        }
+      ]
+    },
+    {
+      "toolbar": false,
+      "name": "Web Development",
+      "bookmarks": [
+        {
+          "name": "About the site – alexwlchan",
+          "url": "https://alexwlchan.net/about-the-site/"
         }
       ]
     }
