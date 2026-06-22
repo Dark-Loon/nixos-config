@@ -32,6 +32,13 @@
         mode = "0600";
         path = "${config.users.users.armand.home}/.secrets/anthropic_key";
       };
+      cargo_registry_token = {
+        sopsFile = ../../secrets/cargo_registry_token.enc;
+        format = "binary";
+        owner = "armand";
+        mode = "0600";
+        path = "${config.users.users.armand.home}/.cargo/credentials.toml";
+      };
       speech_key = { };
       speech_region = { };
       azure_openai_key = { };

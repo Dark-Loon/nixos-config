@@ -339,6 +339,10 @@
             {
               "name": "Computer Science",
               "url": "https://arxiv.org/archive/cs"
+            },
+            {
+              "name": "SIGCHLD. Signal handling at DuckDuckGo",
+              "url": "https://duckduckgo.com/?t=ffab&q=SIGCHLD.+Signal+handling&ia=web"
             }
           ]
         },
