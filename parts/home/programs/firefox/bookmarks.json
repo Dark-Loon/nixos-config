@@ -3029,6 +3029,14 @@
         {
           "name": "Optimizing Build Performance - The Cargo Book",
           "url": "https://doc.rust-lang.org/cargo/guide/build-performance.html"
+        },
+        {
+          "name": "Publishing a Crate to Crates.io - The Rust Programming Language",
+          "url": "https://doc.rust-lang.org/book/ch14-02-publishing-to-crates-io.html?highlight=license#adding-metadata-to-a-new-crate"
+        },
+        {
+          "name": "Allow passing a `credentials.toml` file path as a CLI arg for `cargo login` and `cargo publish` · Issue #13932 · rust-lang/cargo",
+          "url": "https://github.com/rust-lang/cargo/issues/13932"
         }
       ]
     },

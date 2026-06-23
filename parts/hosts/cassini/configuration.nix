@@ -211,6 +211,7 @@
       NIXOS_OZONE_WL = "1";
       MOZ_ENABLE_WAYLAND = "1";
       GTK_USE_PORTAL = "1";
+      XDG_CURRENT_DESKTOP = "niri:GNOME";
     };
     pathsToLink = [ "/share/xdg-desktop-portal" "/share/applications" ];
     localBinInPath = true;
@@ -219,7 +220,7 @@
   xdg.portal = {
     enable = true;
     extraPortals = with pkgs; [
-      xdg-desktop-portal-hyprland
+      xdg-desktop-portal-gnome
       xdg-desktop-portal-gtk
       (xdg-desktop-portal-termfilechooser.overrideAttrs (old: {
           postInstall = (old.postInstall or "") + ''
@@ -236,8 +237,8 @@
       };
       niri = {
         default = [ "gtk" ];
-        "org.freedesktop.impl.portal.ScreenCast" = [ "hyprland" ];
-        "org.freedesktop.impl.portal.Screenshot" = [ "hyprland" ];
+        "org.freedesktop.impl.portal.ScreenCast" = [ "gnome" ];
+        "org.freedesktop.impl.portal.Screenshot" = [ "gnome" ];
         "org.freedesktop.impl.portal.FileChooser" = [ "termfilechooser" ];
       };
     };

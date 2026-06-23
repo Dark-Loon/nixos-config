@@ -10,6 +10,7 @@
     git-lfs
     helix # Modal CLI text editor
     xwayland-satellite
+    xdg-desktop-portal-gnome
     foot
     wget # Tool for retrieving files using HTTP, HTTPS, and FTP
     ripgrep
