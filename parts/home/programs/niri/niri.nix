@@ -370,6 +370,8 @@
       "Mod+Ctrl+K".action.move-window-up = { };
       "Mod+Ctrl+L".action.move-column-right = { };
 
+      "Mod+Shift+O".action.toggle-window-rule-opacity = {};
+
       # Alternative commands that move across workspaces when reaching
       # the first or last window in a column.
       # "Mod+J".action.focus-window-or-workspace-down = {};

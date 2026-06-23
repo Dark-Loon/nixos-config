@@ -2882,6 +2882,59 @@
               "url": "https://www.thewildhoneypie.com/buzzing-daily/michelle-sunrise"
             }
           ]
+        },
+        {
+          "name": "In a sec",
+          "bookmarks": [
+            {
+              "name": "jury nullification | Wex | US Law | LII / Legal Information Institute",
+              "url": "https://www.law.cornell.edu/wex/jury_nullification"
+            },
+            {
+              "name": "Case Files: Jury Nullification Cases : Law and Legal Cases : Library : Library & Resources : Fully Informed Jury Association",
+              "url": "https://fija.org/library-and-resources/library/law-and-legal-cases/case-files-jury-nullification-cases.html"
+            },
+            {
+              "name": "The Trial of Susan B. Anthony - susanbanthony.pdf",
+              "url": "https://www.fjc.gov/sites/default/files/trials/susanbanthony.pdf"
+            },
+            {
+              "name": "Just a moment...",
+              "url": "https://famous-trials.com/anthony/435-trialrecord"
+            },
+            {
+              "name": "Just a moment...",
+              "url": "https://famous-trials.com/anthony/454-sentencing"
+            },
+            {
+              "name": "Sparf v. United States - Wikipedia",
+              "url": "https://en.wikipedia.org/wiki/Sparf_v._United_States"
+            },
+            {
+              "name": "Puzzle Streak • lichess.org",
+              "url": "https://lichess.org/streak"
+            },
+            {
+              "name": "Puzzle Storm • lichess.org",
+              "url": "https://lichess.org/storm"
+            },
+            {
+              "name": "nestris.org",
+              "url": "https://nestris.org/login"
+            },
+            {
+              "name": "Basic Development with Zellij",
+              "url": "https://zellij.dev/tutorials/basic-functionality/"
+            },
+            {
+              "name": "musashi no ken at DuckDuckGo",
+              "url": "https://duckduckgo.com/?t=ffab&q=musashi+no+ken&ia=web"
+            },
+            {
+              "name": "LeetCode - The World's Leading Online Programming Learning Platform",
+              "url": "https://leetcode.com/"
+            }
+          ]
         }
       ]
     },
@@ -2964,6 +3017,18 @@
         {
           "name": "Variadics - Rust By Example",
           "url": "https://doc.rust-lang.org/rust-by-example/macros/variadics.html"
+        },
+        {
+          "name": "Updates - Easy Rust",
+          "url": "https://dhghomon.github.io/easy_rust/Chapter_0.html"
+        },
+        {
+          "name": "Learning Rust: Download and deserialize 10 000 files in 9.833 seconds",
+          "url": "https://rup12.net/posts/download-and-deserialize-10000-files-in-10-seconds/"
+        },
+        {
+          "name": "Optimizing Build Performance - The Cargo Book",
+          "url": "https://doc.rust-lang.org/cargo/guide/build-performance.html"
         }
       ]
     },
@@ -3188,6 +3253,10 @@
         {
           "name": "Noctalia-shell at DuckDuckGo",
           "url": "https://duckduckgo.com/?t=ffab&q=Noctalia-shell&ia=web"
+        },
+        {
+          "name": "When opacity is set under window rules, add an option for whether or not to start the window with that opacity. · niri-wm/niri · Discussion #2547",
+          "url": "https://github.com/niri-wm/niri/discussions/2547"
         }
       ]
     },
@@ -3248,10 +3317,6 @@
         {
           "name": "Introduction - Zellij User Guide",
           "url": "https://zellij.dev/documentation/introduction.html"
-        },
-        {
-          "name": "Basic Development with Zellij",
-          "url": "https://zellij.dev/tutorials/basic-functionality/"
         }
       ]
     },
@@ -11520,10 +11585,6 @@
         {
           "name": "Amdir Vs Jovan the last Chairbender on Marcelllus Williams' guilt | PreserveTube",
           "url": "https://preservetube.com/watch?v=QQPrNQxBTNc"
-        },
-        {
-          "name": "Case Files: Jury Nullification Cases : Law and Legal Cases : Library : Library & Resources : Fully Informed Jury Association",
-          "url": "https://fija.org/library-and-resources/library/law-and-legal-cases/case-files-jury-nullification-cases.html"
         }
       ]
     },
@@ -11680,6 +11741,14 @@
         {
           "name": "About the site – alexwlchan",
           "url": "https://alexwlchan.net/about-the-site/"
+        },
+        {
+          "name": "Specification - Glossary | MDN",
+          "url": "https://developer.mozilla.org/en-US/docs/Glossary/Specification"
+        },
+        {
+          "name": "jury nullification | Wex | US Law | LII / Legal Information Institute",
+          "url": "https://www.law.cornell.edu/wex/jury_nullification"
         }
       ]
     }
