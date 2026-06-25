@@ -1,6 +1,37 @@
-show taps developer options
-Termux phone recording
-hunter-gatherers example
+find or create ~/.config/sops/age/keys.txt on cassini
+
+open ~/.config/sops/age/keys.txt
+
+put age1860wzxx9w4ld9jx9d6khvef7malq888qmge2gc4p2y949vlppvjqvxypaq
+replace whatever was there,
+
+Re-encrypt all secrets from cassini (since cassini's host key age1nk8... is a valid recipient and can decrypt)
+Both machines then use the same keys.txt for personal access — nothing breaks anywhere
+
+
+Replace age159q83... with age1860w... as &personal in .sops.yaml
+Re-encrypt all secrets from cassini (since cassini's host key age1nk8... is a valid recipient and can decrypt)
+Both machines then use the same keys.txt for personal access — nothing breaks anywhere
+
+
+
+
+
+
+
+
+The right tool in Rust for this is iterating over char boundaries or using the unicode-segmentation crate if you want true grapheme clusters (which matters for things like emoji with skin tone modifiers, or Devanagari). For most scripts, splitting on whitespace with .split_whitespace() — which you're already using in normalize_whitespace — is actually safe and correct, because word boundaries in the spec sense map reasonably well to whitespace-delimited tokens across writing systems.
+The trickier edge cases are scripts without spaces between words (Thai, Chinese, Japanese), where "split on whitespace" gives you the whole string as one token. For those, you'd either need a language-aware segmenter (a heavy dependency) or just fall back to a byte/char-count heuristic with a caveat.
+ just representative cases:
+
+Basic ASCII
+Multi-word phrases (to confirm you're grabbing word tokens, not chars)
+Arabic (right-to-left, multi-byte)
+Something with accented Latin like French or German
+A CJK string, even just to document and assert the current behavior
+Edge cases: single word input, two word input, empty string
+
+That's maybe 8–10 tests, which mirrors what you already have in fragment.rs. It would give you real confidence and serve as documentation for the behavior across scripts. The existing test for Arabic (مِصر, البحرين) in your fragment tests is a good model for the style.
 
 
 "Chrome has a built-in 'Copy link to highlight' option, but it silently fails for repeated text and many other cases; stf gives you explicit control and works where Chrome's version doesn't."
@@ -16,6 +47,25 @@ when plugging in values to TextFragment from Right-to-Left text, such as Arabic 
 //   - char count or grapheme count for the 300 threshold?
 //   - 300 words for range mode?
 //   - unicode-segmentation for word boundaries (handles RTL correctly?)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -37,6 +87,12 @@ The URL you're deep-linking into is passed to the script automatically by Androi
 
 
 fetch the page and check to also validate word-splitting, getting right range
+
+
+show taps developer options
+Termux phone recording
+hunter-gatherers example
+
 
 tinkering with inquire's colored output
 
