@@ -214,7 +214,6 @@
       XDG_CURRENT_DESKTOP = "niri:GNOME";
     };
     pathsToLink = [ "/share/xdg-desktop-portal" "/share/applications" ];
-    localBinInPath = true;
   };
   
   xdg.portal = {

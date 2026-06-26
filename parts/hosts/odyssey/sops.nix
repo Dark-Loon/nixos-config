@@ -1,4 +1,4 @@
-{ ... }:
+{ config, ... }:
 
 {
   sops = {
@@ -22,7 +22,7 @@
         sopsFile = ../../secrets/ssh_private_key.enc;
         format = "binary";
         owner = "armand";
-        path = "/home/armand/.ssh/id_ed25519";
+        path = "${config.users.users.armand.home}/.ssh/id_ed25519";
         mode = "0600";
       };
       anthropic_key = {
@@ -30,7 +30,14 @@
         format = "binary";
         owner = "armand";
         mode = "0600";
-        path = "/home/armand/.secrets/anthropic_key";
+        path = "${config.users.users.armand.home}/.secrets/anthropic_key";
+      };
+      cargo_registry_token = {
+        sopsFile = ../../secrets/cargo_registry_token.enc;
+        format = "binary";
+        owner = "armand";
+        mode = "0600";
+        path = "${config.users.users.armand.home}/.cargo/credentials.toml";
       };
       speech_key = { };
       speech_region = { };

@@ -1,25 +1,3 @@
-find or create ~/.config/sops/age/keys.txt on cassini
-
-open ~/.config/sops/age/keys.txt
-
-put age1860wzxx9w4ld9jx9d6khvef7malq888qmge2gc4p2y949vlppvjqvxypaq
-replace whatever was there,
-
-Re-encrypt all secrets from cassini (since cassini's host key age1nk8... is a valid recipient and can decrypt)
-Both machines then use the same keys.txt for personal access — nothing breaks anywhere
-
-
-Replace age159q83... with age1860w... as &personal in .sops.yaml
-Re-encrypt all secrets from cassini (since cassini's host key age1nk8... is a valid recipient and can decrypt)
-Both machines then use the same keys.txt for personal access — nothing breaks anywhere
-
-
-
-
-
-
-
-
 The right tool in Rust for this is iterating over char boundaries or using the unicode-segmentation crate if you want true grapheme clusters (which matters for things like emoji with skin tone modifiers, or Devanagari). For most scripts, splitting on whitespace with .split_whitespace() — which you're already using in normalize_whitespace — is actually safe and correct, because word boundaries in the spec sense map reasonably well to whitespace-delimited tokens across writing systems.
 The trickier edge cases are scripts without spaces between words (Thai, Chinese, Japanese), where "split on whitespace" gives you the whole string as one token. For those, you'd either need a language-aware segmenter (a heavy dependency) or just fall back to a byte/char-count heuristic with a caveat.
  just representative cases:
@@ -50,6 +28,20 @@ when plugging in values to TextFragment from Right-to-Left text, such as Arabic 
 
 
 
+find or create ~/.config/sops/age/keys.txt on cassini
+
+open ~/.config/sops/age/keys.txt
+
+put age1860wzxx9w4ld9jx9d6khvef7malq888qmge2gc4p2y949vlppvjqvxypaq
+replace whatever was there,
+
+Re-encrypt all secrets from cassini (since cassini's host key age1nk8... is a valid recipient and can decrypt)
+Both machines then use the same keys.txt for personal access — nothing breaks anywhere
+
+
+Replace age159q83... with age1860w... as &personal in .sops.yaml
+Re-encrypt all secrets from cassini (since cassini's host key age1nk8... is a valid recipient and can decrypt)
+Both machines then use the same keys.txt for personal access — nothing breaks anywhere
 
 
 
@@ -65,7 +57,8 @@ when plugging in values to TextFragment from Right-to-Left text, such as Arabic 
 
 
 
-
+https://pmc.ncbi.nlm.nih.gov/articles/PMC4958132
+Our analysis does not support the prevalence of either type of high god among ancestral hunter-gatherers, and the evolution of high gods does not correlate with any of the other traits of hunter-gatherer religion, including ancestor worship.
 
 
 
@@ -78,9 +71,11 @@ Uit een soort exploratory analysis van oude culturen blijkt: "Our analysis does 
  https://pmc.ncbi.nlm.nih.gov/articles/PMC4958132/#:~:text=Our%20analysis%20does%20not%20support%20the%20prevalence%20of%20either%20type%20of%20high%20god%20among%20ancestral%20hunter-gatherers%2C%20and%20the%20evolution%20of%20high%20gods%20does%20not%20correlate%20with%20any%20of%20the%20other%20traits%20of%20hunter-gatherer%20religion%2C%20including%20ancestor%20worship.
 
 
-Release notes document all significant changes
 
 The URL you're deep-linking into is passed to the script automatically by Android's share sheet as $1 — the user never types it.
+show taps developer options
+Termux phone recording
+hunter-gatherers example
 
 
 
@@ -89,9 +84,6 @@ The URL you're deep-linking into is passed to the script automatically by Androi
 fetch the page and check to also validate word-splitting, getting right range
 
 
-show taps developer options
-Termux phone recording
-hunter-gatherers example
 
 
 tinkering with inquire's colored output
