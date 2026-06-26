@@ -117,6 +117,7 @@ in
     # claude-code # Agentic coding tool
 
     # Misc
+    vhs
     brightnessctl
     nixd
     cmatrix
