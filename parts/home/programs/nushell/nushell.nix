@@ -20,7 +20,9 @@
     '';
     extraConfig = ''
       use std/config *
-      use ~/.cache/stf/completions.nu *
+      if ("~/.cache/stf/completions.nu" | path expand | path exists) {
+          use ~/.cache/stf/completions.nu *
+      }
 
       $env.config.hooks.env_change.PWD = $env.config.hooks.env_change.PWD? | default []
 

@@ -62,13 +62,12 @@ Our analysis does not support the prevalence of either type of high god among an
 
 
 
-test with long passage:
+https://plato.stanford.edu/entries/wittgenstein
+It is here that Wittgenstein’s rejection of general explanations, and definitions based on sufficient and necessary conditions, is best pronounced. Instead of these symptoms of the philosopher’s “craving for generality,” he points to ‘family resemblance’ as the more suitable analogy for the means of connecting particular uses of the same word. There is no reason to look, as we have done traditionally—and dogmatically—for one, essential core in which the meaning of a word is located and which is, therefore, common to all uses of that word. We should, instead, travel with the word’s uses through “a complicated network of similarities overlapping and criss-crossing” (PI 66). Family resemblance also serves to exhibit the lack of boundaries and the distance from exactness that characterize different uses of the same concept.
 
-"It is here that Wittgenstein’s rejection of general explanations, and definitions based on sufficient and necessary conditions, is best pronounced. Instead of these symptoms of the philosopher’s “craving for generality,” he points to ‘family resemblance’ as the more suitable analogy for the means of connecting particular uses of the same word. There is no reason to look, as we have done traditionally—and dogmatically—for one, essential core in which the meaning of a word is located and which is, therefore, common to all uses of that word. We should, instead, travel with the word’s uses through “a complicated network of similarities overlapping and criss-crossing” (PI 66). Family resemblance also serves to exhibit the lack of boundaries and the distance from exactness that characterize different uses of the same concept."(https://plato.stanford.edu/entries/wittgenstein/)
 
-replace long passage test in integration.rs with the following, while adding tests dedicated to the range feature with the SEP example above:
-Uit een soort exploratory analysis van oude culturen blijkt: "Our analysis does not support the prevalence of either type of high god among ancestral hunter-gatherers, and the evolution of high gods does not correlate with any of the other traits of hunter-gatherer religion, including ancestor worship."
- https://pmc.ncbi.nlm.nih.gov/articles/PMC4958132/#:~:text=Our%20analysis%20does%20not%20support%20the%20prevalence%20of%20either%20type%20of%20high%20god%20among%20ancestral%20hunter-gatherers%2C%20and%20the%20evolution%20of%20high%20gods%20does%20not%20correlate%20with%20any%20of%20the%20other%20traits%20of%20hunter-gatherer%20religion%2C%20including%20ancestor%20worship.
+
+
 
 
 
@@ -290,7 +289,6 @@ ffmpeg -i input.mp4 -vf "fps=15,scale=600:-1:flags=lanczos" -loop 0 output.gif
 
 
 
-op papa's laptop
 
 
 nix-shell -p ffmpeg "ffmpeg -i demo.mp4 -vf "fps=15,scale=800:-1:flags=lanczos" demo.gif"
