@@ -11759,16 +11759,6 @@
           "url": "https://www.law.cornell.edu/wex/jury_nullification"
         }
       ]
-    },
-    {
-      "toolbar": false,
-      "name": "GitLab",
-      "bookmarks": [
-        {
-          "name": "GitLab System Status",
-          "url": "https://status.gitlab.com/"
-        }
-      ]
     }
   ]
 }
