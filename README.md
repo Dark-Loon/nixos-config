@@ -1,13 +1,12 @@
-<h1 align="center">Dark_Loon/dotfiles</h1>
+<h1 align="center">Dark-Loon/dotfiles</h1>
 
 # About
 
-In-house baked configs for Home-Manager and NixOS. Borrowed bits sprinkled on
-top. Using [flakes](https://wiki.nixos.org/wiki/Flakes) and
+This repository configures all of my digital devices that run NixOS. Using [flakes](https://wiki.nixos.org/wiki/Flakes) and
 [flake-parts](https://github.com/hercules-ci/flake-parts).
 
 See an overview of the flake outputs by running
-`nix flake show git+https://gitlab.com/Dark_Loon/dotfiles`.
+`nix flake show git+https://gitlab.com/Dark-Loon/dotfiles`.
 
 
 # Structure
@@ -27,7 +26,7 @@ See an overview of the flake outputs by running
 Install NixOS using the [graphical installer](https://nixos.org/download/#nixos-iso), then:
 
 ```nu
-git clone https://gitlab.com/Dark_Loon/dotfiles ~/dotfiles
+git clone https://gitlab.com/Dark-Loon/dotfiles ~/dotfiles
 cd ~/dotfiles
 ./bootstrap.nu
 ```
@@ -40,7 +39,7 @@ To use a specific existing host as a starting point: `./bootstrap.nu --template 
 
 Use a template:
 ```nu
-# Provide a development shell (alternatively nix flake init -t gitlab:Dark_loon/dotfiles#java)
+# Provide a development shell (alternatively nix flake init -t gitlab:Dark-loon/dotfiles#java)
 dvt java
 dvt java newProject
 dvt typst my-project
@@ -80,4 +79,4 @@ Other people from whom I learned and copied:
 - [fufexan/dotfiles](https://github.com/fufexan/dotfiles)
 - [Pipshag/dotfiles_nord](https://github.com/Pipshag/dotfiles_nord)
 - [Igaboury](https://github.com/lgaboury/Sway-Waybar-Install-Script)
-- [Claude Sonnet 4.6, Anthropic](https://claude.ai/)
+- [Claude](https://claude.ai/)

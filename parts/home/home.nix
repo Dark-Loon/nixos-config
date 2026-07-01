@@ -211,8 +211,8 @@ in
     Unit = {
       Description = "Export Firefox bookmarks to dotfiles";
       After = [ "graphical-session.target" ];
-      StartLimitIntervalSec = 120;
-      StartLimitBurst = 3;
+      StartLimitIntervalSec = 60;
+      StartLimitBurst = 10;
     };
     Service = {
       Type = "oneshot";
